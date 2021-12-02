@@ -1,0 +1,44 @@
+#%RAML 1.0
+title: Calculator
+version: 1.0
+description: "creating new demo API for practice"
+protocols:
+  - HTTP
+traits:
+  reuse: !include Traits/trait.raml 
+mediaType: 
+- application/json  
+/Addition:
+  get:
+    is: [reuse]
+    responses:
+      200:
+        body:
+            example: !include Examples/Addition-response.json           
+/Subtraction:
+  post:
+    is: [reuse]
+    responses:
+      200:
+        body:
+            example: !include Examples/Subtraction-response.json                
+/Multiply:
+  put:
+    is: [reuse]
+    responses:
+      200:
+        body:          
+            example: !include Examples/Multiply-response.json            
+/Division:
+  patch:
+    is: [reuse]
+    responses:
+      200:
+        body:          
+            example: !include Examples/Division-response.json
+                                               
+
+                      
+            
+
+            
